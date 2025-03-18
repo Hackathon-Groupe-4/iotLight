@@ -9,6 +9,7 @@ void connectMQTT()
 {
     if (!client.connected())
     {
+        digitalWrite(PIN_LED_Connect, HIGH);
         client.setServer(MQTT_SERVER, 1883);
         client.setCallback(callbackLight);
         while (!client.connected())
@@ -31,6 +32,7 @@ void connectMQTT()
             }
         }
         publishMessage("Devices", ID_CLIENT_MQTT);
+        digitalWrite(PIN_LED_Connect, LOW);
     }
 }
 

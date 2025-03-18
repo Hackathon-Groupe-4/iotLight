@@ -4,12 +4,16 @@
 
 void connectWiFi() {
     if (WiFi.status() != WL_CONNECTED) {
+        
+        digitalWrite(PIN_LED_Connect, HIGH);
         WiFi.begin(SSID, PASSWORD);
         while (WiFi.status() != WL_CONNECTED) {
             delay(500);
             Serial.print(".");
         }
         Serial.println("\nWiFi connecté");
+        
+        digitalWrite(PIN_LED_Connect, LOW);
     }
     
 }

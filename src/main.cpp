@@ -9,6 +9,7 @@ int myFunction(int, int);
 void setup() {
   Serial.begin(115200);
   pinMode(PIN_LED,OUTPUT);
+  pinMode(PIN_LED_Connect,OUTPUT);
 }
 
 void loop() {

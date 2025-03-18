@@ -5,4 +5,5 @@
 
 #define TOPIC_ROOT "HomeConnect"
 
-#define PIN_LED 2
+#define PIN_LED_Connect 2
+#define PIN_LED 4
